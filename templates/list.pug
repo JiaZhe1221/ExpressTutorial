@@ -1,0 +1,14 @@
+//- templates/list.pug
+html
+  head
+    title Prophecies List
+  body
+    h1 All Prophecies
+    if prophecies.length > 0
+      ul
+        each prophecy in prophecies
+          li
+            h3= prophecy.title
+            p= prophecy.description
+    else
+      p No prophecies available.
